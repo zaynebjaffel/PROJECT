@@ -9,7 +9,7 @@
  */
 public class TwoFloodwalls {
 
-    /** Brute force solution. Time: O(?)  Space: O(?) */
+    /** Brute force solution. Time: O(n^2)  Space: O(1) */
     public static int maxWater(int[] walls) {
         int max = 0;
         for (int i = 0; i < walls.length; i++) {
