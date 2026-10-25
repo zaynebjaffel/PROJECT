@@ -77,7 +77,6 @@ public static int optimized(int[][] map) {
             {0, 0, 1, 0, 0},
             {1, 1, 0, 0, 1}
         };
-
         System.out.println("Forest patches: " + optimized(map));
     }
 }
