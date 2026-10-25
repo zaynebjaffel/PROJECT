@@ -47,7 +47,6 @@ public class TwoFloodWalls {
     }
     public static void main(String[] args) {
         int[] walls = {2, 7, 3, 1, 6, 4, 2, 5};
-
         System.out.println("Brute force: " + maxWater(walls));
         System.out.println("Optimized: " + optimized(walls));
     }
