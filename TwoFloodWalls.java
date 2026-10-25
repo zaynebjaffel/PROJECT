@@ -29,23 +29,19 @@ public class TwoFloodwalls {
         int left = 0;
         int right = walls.length - 1;
         int max = 0;
-
         while (left < right) {
             int height = Math.min(walls[left], walls[right]);
             int width = right - left;
             int area = height * width;
-
             if (area > max) {
                 max = area;
             }
-
             if (walls[left] < walls[right]) {
                 left++;
             } else {
                 right--;
             }
         }
-
         return max;
     }
     
