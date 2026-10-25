@@ -52,31 +52,24 @@ public static int optimized(int[][] map) {
                 }
             }
         }
-
         return patches;
     }
-
     private static void explore(
             int[][] map, boolean[][] visited, int row, int col) {
-
         int rows = map.length;
         int cols = map[0].length;
-
         if (row < 0 || row >= rows ||
             col < 0 || col >= cols ||
             map[row][col] == 0 ||
             visited[row][col]) {
             return;
         }
-
         visited[row][col] = true;
-
         explore(map, visited, row - 1, col);
         explore(map, visited, row + 1, col);
         explore(map, visited, row, col - 1);
         explore(map, visited, row, col + 1);
     }
-
     public static void main(String[] args) {
     int[][] map = {
         {1, 1, 0, 0},
@@ -84,7 +77,6 @@ public static int optimized(int[][] map) {
         {0, 0, 0, 1},
         {1, 0, 0, 0}
     };
-
     System.out.println("Forest patches: " + optimized(map));
 }
 }
