@@ -12,19 +12,16 @@ public class TwoFloodwalls {
     /** Brute force solution. Time: O(?)  Space: O(?) */
     public static int maxWater(int[] walls) {
         int max = 0;
-
         for (int i = 0; i < walls.length; i++) {
             for (int j = i + 1; j < walls.length; j++) {
                 int height = Math.min(walls[i], walls[j]);
                 int width = j - i;
                 int area = height * width;
-
                 if (area > max) {
                     max = area;
                 }
             }
         }
-
         return max;
     }
 
