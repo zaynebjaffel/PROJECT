@@ -8,7 +8,6 @@
  * the test runner looks them up by name. You may add helper methods.
  */
 public class TwoFloodWalls {
-
     /** Brute force solution. Time: O(n^2)  Space: O(1) */
     public static int maxWater(int[] walls) {
         int max = 0;
@@ -28,7 +27,6 @@ public class TwoFloodWalls {
     public static int optimized(int[] walls) {
         int left = 0;
         int right = walls.length - 1;
-
         int max = 0;
         while (left < right) {
             int height = Math.min(walls[left], walls[right]);
