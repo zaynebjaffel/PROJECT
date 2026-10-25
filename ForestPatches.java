@@ -71,12 +71,13 @@ public static int optimized(int[][] map) {
         explore(map, visited, row, col + 1);
     }
     public static void main(String[] args) {
-    int[][] map = {
-        {1, 1, 0, 0},
-        {0, 1, 0, 1},
-        {0, 0, 0, 1},
-        {1, 0, 0, 0}
-    };
-    System.out.println("Forest patches: " + optimized(map));
-}
+        int[][] map = {
+            {1, 1, 0, 0, 1},
+            {1, 0, 0, 1, 1},
+            {0, 0, 1, 0, 0},
+            {1, 1, 0, 0, 1}
+        };
+
+        System.out.println("Forest patches: " + optimized(map));
+    }
 }
