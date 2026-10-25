@@ -7,7 +7,7 @@
  * Keep the class name, method names and parameter types exactly as they are;
  * the test runner looks them up by name. You may add helper methods.
  */
-public class TwoFloodwalls {
+public class TwoFloodWalls {
 
     /** Brute force solution. Time: O(n^2)  Space: O(1) */
     public static int maxWater(int[] walls) {
@@ -28,7 +28,7 @@ public class TwoFloodwalls {
     public static int optimized(int[] walls) {
         int left = 0;
         int right = walls.length - 1;
-        
+
         int max = 0;
         while (left < right) {
             int height = Math.min(walls[left], walls[right]);
@@ -45,6 +45,12 @@ public class TwoFloodwalls {
         }
         return max;
     }
-    
+    public static void main(String[] args) {
+        int[] walls = {2, 7, 3, 1, 6, 4, 2, 5};
+
+        System.out.println("Brute force: " + maxWater(walls));
+        System.out.println("Optimized: " + optimized(walls));
+    }
+
 
 }
