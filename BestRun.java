@@ -27,7 +27,7 @@ public class BestRun {
 
         return maxSum;
     }
-    /** Optimized solution. Time: O(?)  Space: O(?) */
+    /** Optimized solution. Time: O(n)  Space: O(1) */
     public static int optimized(int[] profit) {
         int maxSum = profit[0];
         int currentSum = profit[0];
