@@ -29,7 +29,12 @@ public class BestRun {
     }
     /** Optimized solution. Time: O(?)  Space: O(?) */
     public static int optimized(int[] profit) {
-        // TODO
-        return 0;
+        int maxSum = profit[0];
+        int currentSum = profit[0];
+        for (int i = 1; i < profit.length; i++) {
+            currentSum = Math.max(profit[i], currentSum + profit[i]);
+            maxSum = Math.max(maxSum, currentSum);
+        }
+        return maxSum;
     }
 }
