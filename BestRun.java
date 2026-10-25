@@ -37,4 +37,11 @@ public class BestRun {
         }
         return maxSum;
     }
+    public static void main(String[] args) {
+        int[] profit = {3, -5, 4, -1, 2, 6, -9, 5};
+
+        System.out.println("Brute force: " + brute(profit));
+        System.out.println("Optimized: " + optimized(profit));
+    }
+
 }
