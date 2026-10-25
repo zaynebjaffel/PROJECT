@@ -9,7 +9,7 @@
  */
 public class BestRun {
 
-    /** Brute force solution. Time: O(?)  Space: O(?) */
+    /** Brute force solution. Time: O(n^2)  Space: O(1) */
      public static int brute(int[] profit) {
         int n = profit.length;
         int maxSum = profit[0];
