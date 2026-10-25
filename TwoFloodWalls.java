@@ -24,13 +24,30 @@ public class TwoFloodwalls {
         }
         return max;
     }
-
-
-
-    /** Optimized solution. Time: O(?)  Space: O(?) */
+    /** Optimized solution. Time: O(n)  Space: O(1) */
     public static int optimized(int[] walls) {
-        // TODO
-        return 0;
+        int left = 0;
+        int right = walls.length - 1;
+        int max = 0;
+
+        while (left < right) {
+            int height = Math.min(walls[left], walls[right]);
+            int width = right - left;
+            int area = height * width;
+
+            if (area > max) {
+                max = area;
+            }
+
+            if (walls[left] < walls[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return max;
     }
+    
 
 }
